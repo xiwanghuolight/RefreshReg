@@ -58,3 +58,12 @@ Download the datasets used in the paper:
 - [MVP-RG](https://mvp-dataset.github.io/MVP/Registration.html)
 
 ## 🎓 Citation
+
+## 🙏 Acknowledgements
+
+Thanks for the open source code:
+- [D3Feat](https://github.com/XuyangBai/D3Feat.pytorch)
+- [Kpconv](https://github.com/HuguesTHOMAS/KPConv-PyTorch)
+- [PREDATOR](https://github.com/prs-eth/OverlapPredator)
+- [GCNet](https://github.com/zhulf0804/GCNet)
+- [GeoTransformer](https://github.com/qinzheng93/GeoTransformer)
