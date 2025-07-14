@@ -14,16 +14,19 @@ Point cloud registration is a crucial task in the field of 3D processing researc
 
 ## 📊 Performance
 
-| Benchmark   | RR                  | State-of-the-Art | RefreshReg | Improvement |
-|----------|---------------------|------------------|------------|-------------|
-| 3DMatch | Registration Recall | 71.7% (NMCT)     | 73.5%      | 1.8%        |
-| 3DLoMatch | Registration Recall | 71.7% (NMCT)     | 73.5%      | 1.8%        |
-| KITTI    | Registration Recall | 99.8% (NMCT)     | 99.8%      | 6%*         |
-| MVP-RG   | L_RMSE              | 0.115 (NMCT)     | 0.097      | 38%         |
+##3DMatch
+| Benchmark |   RR  |  FMR  |   IR  |
+|---------- |-------|-------|-------|
+| 3DMatch   | 94.2% | 98.3% | 66.9% |
+| 3DLoMatch | 73.5% | 85.2% | 39.1% |
 
-*Improvement in other key metrics (e.g., RTE/RRE).
+##Kitti odometry
+| Benchmark | RRE | RTE  |  RR  |
+|---------- |-----|------|------|
+|   Kitti   | 5.9 | 0.23 | 99.8%|
 
-For detailed results, refer to the [paper](https://arxiv.org/abs/xxxx.xxxx).
+
+For detailed results, refer to the paper.
 
 ## 🛠️ Installation
 
@@ -35,8 +38,11 @@ For detailed results, refer to the [paper](https://arxiv.org/abs/xxxx.xxxx).
 
 ### Install
 ```bash
+conda create -n RefreshReg python==3.8
+conda activate RefreshReg
 git clone https://github.com/xiwanghuolight/RefreshReg.git
 cd RefreshReg
+cd cpp_wrappers; sh compile_wrappers.sh; cd ..
 pip install -r requirements.txt
 ```
 
@@ -44,8 +50,7 @@ pip install -r requirements.txt
 
 ### Datasets
 Download the datasets used in the paper:
-- [3DMatch/3DLoMatch](https://3dmatch.cs.princeton.edu/)
-- [ScanNet](https://www.scan-net.org/)
+- [3DMatch/3DLoMatch](https://github.com/prs-eth/OverlapPredator))
 - [KITTI](http://www.cvlibs.net/datasets/kitti/)
 - [MVP-RG](https://github.com/paul007pl/MVP_RG)
 
