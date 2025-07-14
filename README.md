@@ -53,7 +53,7 @@ pip install -r requirements.txt
 
 ### Datasets
 Download the datasets used in the paper:
-- [3DMatch/3DLoMatch](https://github.com/prs-eth/OverlapPredator))
+- [3DMatch/3DLoMatch](https://github.com/prs-eth/OverlapPredator)
 - [KITTI](https://www.cvlibs.net/datasets/kitti/eval_odometry.php)
 - [MVP-RG](https://mvp-dataset.github.io/MVP/Registration.html)
 
