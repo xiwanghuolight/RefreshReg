@@ -14,19 +14,22 @@ Point cloud registration is a crucial task in the field of 3D processing researc
 
 ## 📊 Performance
 
-##3DMatch
-| Benchmark |   RR  |  FMR  |   IR  |
+### 3DMatch
+| Benchmark |   RR(%)  |  FMR(%)  |   IR(%)  |
 |---------- |-------|-------|-------|
-| 3DMatch   | 94.2% | 98.3% | 66.9% |
-| 3DLoMatch | 73.5% | 85.2% | 39.1% |
+| 3DMatch   | 94.2 | 98.3 | 66.9 |
+| 3DLoMatch | 73.5 | 85.2 | 39.1 |
 
-##Kitti odometry
-| Benchmark | RRE | RTE  |  RR  |
+### Kitti odometry
+| Benchmark | RRE(°) | RTE(cm)  |  RR(%)  |
 |---------- |-----|------|------|
-|   Kitti   | 5.9 | 0.23 | 99.8%|
+|   Kitti   | 5.9 | 0.23 | 99.8|
 
+### MVP-RG
+| Benchmark | RRE(°) | RTE(cm)  |  RR(%)  |
+|---------- |-----|------|------|
+|   MVP-RG   | 7.36 | 0.047 | 99.8|
 
-For detailed results, refer to the paper.
 
 ## 🛠️ Installation
 
@@ -51,7 +54,7 @@ pip install -r requirements.txt
 ### Datasets
 Download the datasets used in the paper:
 - [3DMatch/3DLoMatch](https://github.com/prs-eth/OverlapPredator))
-- [KITTI](http://www.cvlibs.net/datasets/kitti/)
-- [MVP-RG](https://github.com/paul007pl/MVP_RG)
+- [KITTI](https://www.cvlibs.net/datasets/kitti/eval_odometry.php)
+- [MVP-RG](https://mvp-dataset.github.io/MVP/Registration.html)
 
 ## 🎓 Citation
