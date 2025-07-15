@@ -7,20 +7,6 @@
 Point cloud registration is a crucial task in the field of 3D processing research, which aims to align two or more point cloud scans into the same coordinate system. A significant factor limiting the performance of point cloud registration is the low proportion of inlier correspondences between two unaligned point clouds. It is particularly pronounced when the overlap between two scenes is low. Based on this observation, we propose a novel point cloud registration framework that enhances the proportion of correct correspondences via two aspects: extracting richer global geometric information for accurate identification of overlapping regions, and rejecting outliers based on spatial feature consistency. During the feature extraction phase, we first encode local geometry utilizing the Point Pair Features and then propose the Dual Graph Convolution module to reshape the receptive field, thereby expanding perception beyond small local areas. In the transformation estimation phase, we design a filtering module based on a multi-layer decoder. We extract point cloud features at different resolutions and select high-confidence point cloud pairs for registration based on the consistency of correspondences. We test the performance of our method on four datasets (3DMatch, ScanNet, KITTI, and MVP-RG). Compared with state-of-the-art approach NMCT, our method achieves improvements of 6% / 38% on KITTI / MVP-RG. Additionally, our filtering approach enhances the operational speed of RANSAC by more than 300%.
 ### The overview of RefreshReg
 ![image](https://github.com/xiwanghuolight/RefreshReg/blob/main/assets/fig1.png)
-### Dual Graph Convolution reshapes the receptive field
-<div align=center>
-    <img src="https://github.com/xiwanghuolight/RefreshReg/blob/main/assets/fig2.png" img width="500" height="750">
-</div>
-
-### The filtering module removes outliers
-<div align=center>
-    <img src="https://github.com/xiwanghuolight/RefreshReg/blob/main/assets/fig3.png" img width="500" height="850">
-</div>
-## 🚀 Contributions
-
-- **local-to-global framework**: We present RefreshReg, a point cloud registration framework featuring a local-to-global strategy. First, local descriptors capture fine-grained geometric information. Second, the receptive field is reshaped via DGC. Finally, we utilize a bilinear response module to derive global geometric features
-- **Dual Graph Convolution module**: We propose a Dual Graph Convolution (DGC) module to reshape the receptive field, integrating spatial geometric information and feature context, which contributes to the accurate inference of overlapping regions in point clouds.
-- **filtering strategy**: We propose a filtering module based on a multi-layer decoder. It adaptively fuses multi-resolutional features and rejects outliers, which helps to increase the proportion of correct correspondences during matching.
 
 ## 📊 Performance
 
